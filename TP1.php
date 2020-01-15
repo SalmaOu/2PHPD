@@ -70,11 +70,30 @@
         echo "<br><br>";
 
         $car_registration = array("AA", "001", "AA");
-
-        for($i = 0; $i < sizeof($car_registration[0]); $i++)
+/* 
+        while($car_registration[0] != "AB" && $car_registration[1] != "004" && $car_registration[2] != "AB")
         {
-            echo $car_registration[1];
+            $car_registration[0] = $car_registration[0]++;
+        } 
+*/
+        for($i = 0; $i < sizeof($car_registration); $i++)
+        {
+            $car_registration[$i]++;
+            if($car_registration[$i] == "AB")
+            { 
+                echo $car_registration[$i];
+                $i++;
+            }
+            if($car_registration[$i] == "002")
+            {
+                echo $car_registration[$i];
+                $i++;
+            }
+
+            break;
+           
         }
+             
 
 
         // Q.4 
@@ -103,11 +122,11 @@
             echo '<script type="text/javascript">
              alert("'.$alert_message.'")
               </script>';
-            return TRUE;
+            return true;
         }
        
         
-        //send_alert_message('Message d\'erreur');
+        send_alert_message('Message d\'erreur');
 
 
         // Q.6 
