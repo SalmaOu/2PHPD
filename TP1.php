@@ -20,6 +20,7 @@
 
         $age = array(20,24,31,46,17,50,38,32,45, 49);
         $gender = array("Male", "Female", "Other");
+
         $i = 0;
         $j = 0;
 
@@ -76,22 +77,23 @@
             $car_registration[0] = $car_registration[0]++;
         } 
 */
+     /*  */
         for($i = 0; $i < sizeof($car_registration); $i++)
         {
             $car_registration[$i]++;
+           
             if($car_registration[$i] == "AB")
-            { 
-                echo $car_registration[$i];
-                $i++;
-            }
-            if($car_registration[$i] == "002")
             {
                 echo $car_registration[$i];
-                $i++;
+                
             }
-
-            break;
+            
+            if($car_registration[$i] == "002")
+            {
+                echo "00".$car_registration[$i];
+            }
            
+            echo "&nbsp";
         }
              
 
@@ -134,7 +136,7 @@
         echo "Question 6 - Transform a string with different cases so that each word has an initial in uppercase";
         echo "<br><br>";
 
-        $string = "AuTisT sPonGeBoB";
+        $string = "HeLlO wOrLd";
 
         for($i = 0; $i < strlen($string); $i++)
         {
