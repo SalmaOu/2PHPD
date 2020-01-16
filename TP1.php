@@ -69,10 +69,30 @@
         echo "Question 2 - Version 2 - Check if the values have letters from A to Z";
         echo "<br><br>";
 
+        //pas aléatoirement
         $table_of_letters = array("A", "B", "C", "D");
 
         //on parcoure le tableau $name
         foreach($table_of_letters as $key => $letter )
+        {
+            echo "Valeurs : " .$letter. " et son indice : " . $key;
+            echo "<br>";
+        }
+
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+
+        //aléatoirement avec la fonction chr
+        $table_of_letterss = array();
+
+        //on insère d'abord dans notre tableau des variables random
+        for($i = 0; $i<5; $i++)
+        {
+            array_push($table_of_letterss, chr(rand(65,90)));
+        }
+        
+        foreach($table_of_letterss as $key => $letter)
         {
             echo "Valeurs : " .$letter. " et son indice : " . $key;
             echo "<br>";
