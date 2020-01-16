@@ -39,7 +39,7 @@
         // Q.2
 
         echo "<br><br><br>";
-        echo "Question 2 - Check if the values have letters from A to Z";
+        echo "Question 2 - Version 1 - Check if the values have letters from A to Z";
         echo "<br><br>";
 
         $table_of_names = array("jais293apz", "k12213sazuizd", "dja32131zi", "dhz2213aioldh");
@@ -53,6 +53,7 @@
             //on parcoure chaque lettre 
             for($j = 0; $j<sizeof($from_string_to_array); $j++)
             {
+
                 //et on vérifie si on a des lettres de A à Z 
                 if(preg_match("/^[a-zA-Z]$/", $from_string_to_array[$j]))
                 {
@@ -61,6 +62,19 @@
                 }
             }
             
+            echo "<br>";
+        }
+
+        echo "<br><br><br>";
+        echo "Question 2 - Version 2 - Check if the values have letters from A to Z";
+        echo "<br><br>";
+
+        $table_of_letters = array("A", "B", "C", "D");
+
+        //on parcoure le tableau $name
+        foreach($table_of_letters as $key => $letter )
+        {
+            echo "Valeurs : " .$letter. " et son indice : " . $key;
             echo "<br>";
         }
 
