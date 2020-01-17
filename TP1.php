@@ -13,11 +13,7 @@
         // Q.1
         echo "Question 1 - Select a male person between 31 and 50 years of age";
         echo "<br><br>";
-        /*$person = array(
-            "name" => array("Test1", "Test2", "NomA", "HZIZA"),
-            "age" =>
-        );*/
-
+        
         $age = array(20,24,31,46,17,50,38,32,45, 49);
         $gender = array("Male", "Female", "Other");
 

@@ -2,9 +2,10 @@
 
     // Q.4 - Form data is processed in the same file as the form itself
 
-    include("TP2.php");
+    include("TP2.php"); //c'est TP2.html
 
    // Q.2 -Checking 
+   echo "Confirmation de vos coordonnées";
     if(!empty($_POST['surname']) && !empty($_POST["first_name"]) && !empty($_POST["email"]) && !empty($_POST["address"]) && !empty($_POST["city"]) && !empty($_POST["zipcode"]))
     {
         $surname = $_POST["surname"];
@@ -14,7 +15,9 @@
         $city = $_POST["city"];
         $zip = $_POST["zipcode"];
 
-        echo "<table>";
+        echo "<br/><br/><br/>";
+
+        echo "<table style='border:1px solid black; font-size:18;'>";
             echo "<thead>";
                 echo "<tr>";
                     echo "<th>Surname</th>";
@@ -43,6 +46,7 @@
         echo "</table>";
         
     }
+
     // Q.3 - Displaying an alert
     else{
         echo '<script type="text/javascript">
